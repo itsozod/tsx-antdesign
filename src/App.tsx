@@ -18,6 +18,12 @@ const { Header, Content } = Layout;
 
 const App = () => {
   const myTheme = useSelector((state) => state.theme.myTheme);
+  const dispatch = useDispatch();
+  const changeThemes = (theme: string) => {
+    UseSelectTheme(theme);
+    dispatch(changeTheme(theme));
+    localStorage.setItem("theme", theme);
+  };
   const items = [
     {
       key: "1",
@@ -27,9 +33,7 @@ const App = () => {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              // justifyContent: "center",
               alignItems: "center",
-              // flexDirection: "column",
               width: 250,
               height: 150,
             }}
@@ -39,9 +43,8 @@ const App = () => {
                 display: "flex",
                 justifyContent: "center",
                 gap: "5px",
-                border: "1px solid black",
+                border: myTheme === "Red" ? "1px solid black" : "none",
                 margin: "2px",
-                // padding: 5
               }}
             >
               <img
@@ -53,12 +56,13 @@ const App = () => {
               <img src="/Ellipse 86 (1).svg" alt="" />
               <img src="/Ellipse 86 (1).svg" alt="" />
             </div>
+
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
                 gap: "5px",
-                border: "1px solid black",
+                border: myTheme === "Blue" ? "1px solid black" : "none",
                 margin: "2px",
                 // padding: 5
               }}
@@ -77,7 +81,7 @@ const App = () => {
                 display: "flex",
                 justifyContent: "center",
                 gap: "5px",
-                border: "1px solid black",
+                // border: myTheme === theme ? "1px solid black" : "none",
                 margin: "2px",
                 // padding: 5
               }}
@@ -92,12 +96,16 @@ const App = () => {
                 display: "flex",
                 justifyContent: "center",
                 gap: "5px",
-                border: "1px solid black",
+                border: myTheme === "Green" ? "1px solid black" : "none",
                 margin: "2px",
                 // padding: 5
               }}
             >
-              <img onClick={() => changeThemes("Green")} src="/Ellipse 86 (4).svg" alt="" />
+              <img
+                onClick={() => changeThemes("Green")}
+                src="/Ellipse 86 (4).svg"
+                alt=""
+              />
               <img src="/Ellipse 86 (4).svg" alt="" />
               <img src="/Ellipse 86 (4).svg" alt="" />
               <img src="/Ellipse 86 (4).svg" alt="" />
@@ -107,7 +115,7 @@ const App = () => {
                 display: "flex",
                 justifyContent: "center",
                 gap: "5px",
-                border: "1px solid black",
+                // border: myTheme === theme ? "1px solid black" : "none",
                 margin: "2px",
                 // padding: 5
               }}
@@ -122,7 +130,7 @@ const App = () => {
                 display: "flex",
                 justifyContent: "center",
                 gap: "5px",
-                border: "1px solid black",
+                // border: myTheme === theme ? "1px solid black" : "none",
                 margin: "2px",
                 // padding: 5
               }}
@@ -137,7 +145,7 @@ const App = () => {
                 display: "flex",
                 justifyContent: "center",
                 gap: "5px",
-                border: "1px solid black",
+                // border: myTheme === theme ? "1px solid black" : "none",
                 margin: "2px",
                 // padding: 5
               }}
@@ -159,12 +167,6 @@ const App = () => {
   const isMediumDevice = useMediaQuery("only screen and (min-width : 768px)");
 
   const userData = useSelector((state: State) => state.userData);
-  const dispatch = useDispatch();
-
-  const changeThemes = (theme: string) => {
-    UseSelectTheme(theme);
-    dispatch(changeTheme(theme));
-  };
 
   return (
     <>
