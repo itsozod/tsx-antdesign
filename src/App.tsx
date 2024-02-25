@@ -45,6 +45,9 @@ const App = () => {
                 gap: "5px",
                 border: myTheme === "Red" ? "1px solid black" : "none",
                 margin: "2px",
+                backgroundColor: "#f7f7f7",
+                padding: "4px",
+                borderRadius: "12px",
               }}
             >
               <img
@@ -64,7 +67,9 @@ const App = () => {
                 gap: "5px",
                 border: myTheme === "Blue" ? "1px solid black" : "none",
                 margin: "2px",
-                // padding: 5
+                backgroundColor: "#f7f7f7",
+                padding: "4px",
+                borderRadius: "12px",
               }}
             >
               <img
@@ -83,7 +88,9 @@ const App = () => {
                 gap: "5px",
                 // border: myTheme === theme ? "1px solid black" : "none",
                 margin: "2px",
-                // padding: 5
+                backgroundColor: "#f7f7f7",
+                padding: "4px",
+                borderRadius: "12px",
               }}
             >
               <img src="/Ellipse 86 (3).svg" alt="" />
@@ -98,7 +105,9 @@ const App = () => {
                 gap: "5px",
                 border: myTheme === "Green" ? "1px solid black" : "none",
                 margin: "2px",
-                // padding: 5
+                backgroundColor: "#f7f7f7",
+                padding: "4px",
+                borderRadius: "12px",
               }}
             >
               <img
@@ -117,7 +126,9 @@ const App = () => {
                 gap: "5px",
                 // border: myTheme === theme ? "1px solid black" : "none",
                 margin: "2px",
-                // padding: 5
+                backgroundColor: "#f7f7f7",
+                padding: "4px",
+                borderRadius: "12px",
               }}
             >
               <img src="/Ellipse 86 (5).svg" alt="" />
@@ -132,7 +143,9 @@ const App = () => {
                 gap: "5px",
                 // border: myTheme === theme ? "1px solid black" : "none",
                 margin: "2px",
-                // padding: 5
+                backgroundColor: "#f7f7f7",
+                padding: "4px",
+                borderRadius: "12px",
               }}
             >
               <img src="/Ellipse 86 (6).svg" alt="" />
@@ -147,7 +160,9 @@ const App = () => {
                 gap: "5px",
                 // border: myTheme === theme ? "1px solid black" : "none",
                 margin: "2px",
-                // padding: 5
+                backgroundColor: "#f7f7f7",
+                padding: "4px",
+                borderRadius: "12px",
               }}
             >
               <img src="/Ellipse 86 (6).svg" alt="" />
